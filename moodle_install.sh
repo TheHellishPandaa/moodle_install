@@ -23,8 +23,8 @@ data_directory=${data_directory:-"/var/www/moodledata"}
 read -sp "Enter the password for the database user: " DB_PASSWORD
 echo
 
-# Prompt for Nextcloud installation path
-read -p "Enter the Nextcloud installation path (default: /var/www/html/moodle): " MOODLE_PATH
+# Prompt for installation path
+read -p "Enter the moodle installation path (default: /var/www/html/moodle): " MOODLE_PATH
 MOODLE_PATH=${MOODLE_PATH:-"/var/www/html/moodle"}
 
 # Prompt for domain or IP
