@@ -69,8 +69,8 @@ echo "Installing MariaDB..."
 apt install mariadb-server -y
 mysql_secure_installation
 
-# Create database and user for Nextcloud
-echo "Configuring database for Nextcloud..."
+# Create database and user for moodle
+echo "Configuring database for Moodle.."
 mysql -u root -e "CREATE DATABASE ${DB_NAME};"
 mysql -u root -e "CREATE USER '${DB_USER}'@'localhost' IDENTIFIED BY '${DB_PASSWORD}';"
 mysql -u root -e "GRANT ALL PRIVILEGES ON ${DB_NAME}.* TO '${DB_USER}'@'localhost';"
@@ -82,7 +82,7 @@ sudo apt install -y php php-gd php-json php-mbstring php-curl php-xml php-zip ph
 sudo apt update
 sudo apt install php-curl php-zip
 
-# Configure PHP for Nextcloud
+# Configure PHP
 echo "Configuring PHP..."
 PHP_INI_PATH=$(php -r "echo php_ini_loaded_file();")
 sed -i "s/memory_limit = .*/memory_limit = 512M/" "$PHP_INI_PATH"
