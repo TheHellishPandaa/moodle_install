@@ -90,6 +90,7 @@ sed -i "s/upload_max_filesize = .*/upload_max_filesize = 512M/" "$PHP_INI_PATH"
 sed -i "s/post_max_size = .*/post_max_size = 512M/" "$PHP_INI_PATH"
 sed -i "s/max_execution_time = .*/max_execution_time = 300/" "$PHP_INI_PATH"
 
+
 # Download and configure Nextcloud
 echo "Downloading Moodle..."
 sudo apt install git
